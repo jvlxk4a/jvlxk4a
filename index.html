@@ -1,54 +1,90 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Dyzio – Mały Pies</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: #f5f5f5;
-            text-align: center;
-            padding: 50px;
-        }
-        .dyzio {
-            background: #fff;
-            display: inline-block;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        .dyzio img {
-            max-width: 300px;
-            border-radius: 15px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 10px;
-            background: #ff6f61;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #ff3b2e;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Dyzio – Mój Pies</title>
+<style>
+    /* Tło tęczowe animowane */
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        text-align: center;
+        padding: 50px;
+        background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+        background-size: 1400% 1400%;
+        animation: rainbow 20s ease infinite;
+        color: #fff;
+    }
+
+    @keyframes rainbow {
+        0% { background-position:0% 50%; }
+        50% { background-position:100% 50%; }
+        100% { background-position:0% 50%; }
+    }
+
+    h1 {
+        text-shadow: 2px 2px 5px #000;
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .dyzio {
+        background: rgba(0,0,0,0.5);
+        display: inline-block;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+    }
+
+    .dyzio img {
+        max-width: 300px;
+        border-radius: 20px;
+        margin: 10px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 12px;
+        background: #ff6f61;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff3b2e;
+        transform: scale(1.05);
+    }
+</style>
 </head>
 <body>
-    <div class="dyzio">
-        <h1>🐾 Dyzio 🐾</h1>
-        <img src="https://place-puppy.com/300x300" alt="Dyzio, mały pies">
-        <p id="opis">Dyzio to mały pies o umaszczeniu brązowo-czarnym. Jest trochę autystyczny, słodki bardzo i ma czarną kropkę na końcu języka. Każdy go kocha!</p>
-        <button onclick="zmienOpis()">Kliknij mnie!</button>
-    </div>
 
-    <script>
-        function zmienOpis() {
-            const opis = document.getElementById('opis');
-            opis.textContent = "Dyzio macha ogonem i daje buziaka 😎🐶!";
-        }
-    </script>
+<h1>🐾 Dyzio 🐾</h1>
+
+<div class="dyzio">
+    <!-- Wstaw tutaj swoje zdjęcia -->
+    <img src="dyzio1.jpg" alt="Dyzio, mój pies">
+    <img src="dyzio2.jpg" alt="Dyzio, mój pies">
+
+    <p id="opis">Dyzio to mały pies o umaszczeniu brązowo-czarnym, trochę autystyczny, bardzo słodki i z czarną kropką na końcu języka. Każdy go kocha!</p>
+
+    <button onclick="zmienOpis()">Kliknij mnie!</button>
+</div>
+
+<script>
+function zmienOpis() {
+    const opis = document.getElementById('opis');
+    opis.textContent = "Dyzio macha ogonem i daje buziaka 😎🐶!";
+}
+</script>
+
 </body>
 </html>
